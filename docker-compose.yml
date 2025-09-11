@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: ninjaerp_postgres
+    environment:
+      POSTGRES_DB: ninjaerp_db
+      POSTGRES_USER: ninjaerp_user
+      POSTGRES_PASSWORD: ninja_secure_2024
+    volumes:
+      - ninjaerp_postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    container_name: ninjaerp_redis
+    ports:
+      - "6379:6379"
+    restart: unless-stopped
+
+  adminer:
+    image: adminer:latest
+    container_name: ninjaerp_adminer
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+
+volumes:
+  ninjaerp_postgres_data:

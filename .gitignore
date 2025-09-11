@@ -1,0 +1,18 @@
+# Archivos de entorno virtual
+venv/
+
+# Archivos de configuración sensibles
+.env
+
+# Salidas de logs
+nohup.out
+
+# Dependencias de Node.js
+node_modules/
+
+# Archivos de Docker
+docker-compose.override.yml
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
