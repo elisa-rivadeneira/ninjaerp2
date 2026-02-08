@@ -15,4 +15,4 @@ docker-compose.override.yml
 
 # Archivos del sistema operativo
 .DS_Store
-Thumbs.db
+Thumbs.db__pycache__/
